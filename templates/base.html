@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Market</title>
+  </head>
+  <body>
+    {% block <content> %} {% endblock %}
+      {% if user.is_authenticated %}
+    <form class="" action= "/users/sign_out" method="get">
+      <input type="submit" name="" value="Sign-out">
+      {% endif %}
+    </form>
+  </body>
+</html>

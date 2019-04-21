@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block <content> %}
+
+  <h1>Those are our makers</h1>
+  <div class="makers">
+    {% for m in makers %}
+    <p>{{m.title}}</p>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block <content> %}
+
+  <h2>Those are all the events</h2>
+  {%for e in events%}
+  <p>{{e.type}}</p>
+  {% endfor %}
+
+  {% endblock %}

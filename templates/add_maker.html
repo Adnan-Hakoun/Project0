@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add maker</title>
+  </head>
+  <body>
+    <h2>Add a new maker</h2>
+    <div class="">
+      <form method="post">
+        {% csrf_token %}
+        <p>Title {{empty_form.title}}</p>
+        <p>Nationality {{empty_form.nationality}}</p>
+        <input type="submit" name="" value="Add">
+      </form>
+    </div>
+  </body>
+</html>

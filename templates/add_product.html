@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add product</title>
+  </head>
+  <body>
+    <h2>Add new product</h2>
+    <div class="">
+      <form method="post">
+        {% csrf_token %}
+        <p>Product name {{empty_form.title}}</p>
+        <p>Product price {{empty_form.price}}</p>
+        <p>Product maker {{empty_form.maker}}</p>
+        <input type="submit" name="" value="Add">
+      </form>
+
+    </div>
+  </body>
+</html>
