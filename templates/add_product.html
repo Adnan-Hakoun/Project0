@@ -9,9 +9,9 @@
     <div class="">
       <form method="post">
         {% csrf_token %}
-        <p>Product name {{empty_form.title}}</p>
-        <p>Product price {{empty_form.price}}</p>
-        <p>Product maker {{empty_form.maker}}</p>
+        <p>Product name {{form.title}}</p>
+        <p>Product price {{form.price}}</p>
+        <p>Product maker {{form.maker}}</p>
         <input type="submit" name="" value="Add">
       </form>
 

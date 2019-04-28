@@ -9,8 +9,8 @@
     <div class="">
       <form method="post">
         {% csrf_token %}
-        <p>Title {{form.title}}</p>
-        <p>Nationality {{form.nationality}}</p>
+        <p>Title {{empty_form.title}}</p>
+        <p>Nationality {{empty_form.nationality}}</p>
         <input type="submit" name="" value="Add">
       </form>
     </div>

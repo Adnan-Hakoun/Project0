@@ -1,9 +1,10 @@
+
 {% extends 'base.html' %}
 {% block <content> %}
 
   <h1>those are our products</h1>
   <div class="products">
-    {% for p in products %}
+    {% for p in object_list %}
     <p>{{p.title}}</p>
     {% endfor %}
     </div>

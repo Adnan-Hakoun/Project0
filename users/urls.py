@@ -5,10 +5,9 @@ from . import views
 urlpatterns = [
     path('sign_in/', views.sign_in),
     path('sign_up/', views.sign_up),
-    path('^(?P<pk>\d+)', views.user_profile),
-    path('', views.get_users),
+    path('', views.user_profile),
     path('sign_out/', views.sign_out),
-
+    path('<int:id>', views.user_profile),
 
 
 ]

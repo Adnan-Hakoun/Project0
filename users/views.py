@@ -5,14 +5,16 @@ from django.contrib.auth.models import User
 
 
 
-def get_users(request):
-    users=User.objects.all()
-    return render(request,'users.html',{'users':users})
+# def get_users(request):
+#     users=User.objects.all()
+#     return render(request,'users.html',{'users':users})
 
 def user_profile(request,*args,**kwargs):
-    print(kwargs)
+    if not request.user.is_authenticated:
+        return redirect('/sign_in/') #we used not just to shorten the code nut we can use the if normally and put all the logic inside the if
+    if request.GET:
+        pass
     return render(request,'profile.html')
-    #user_details=User.objects.get()
 
 def sign_up(request):
     if request.POST:
@@ -28,7 +30,6 @@ def sign_up(request):
 
 
 def sign_in(request):
-    print(request.user)
     if request.user.is_authenticated:
         return redirect ('/products/')
 
